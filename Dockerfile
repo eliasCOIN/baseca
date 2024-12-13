@@ -7,7 +7,7 @@ COPY . /baseca
 RUN apt update && apt clean && make build
 
 # Deploy Image
-FROM alpine:3.17
+FROM alpine:3.21.0
 
 RUN adduser --home /home/baseca baseca --gecos "baseca" --disabled-password && \
     apk --no-cache add ca-certificates && \
